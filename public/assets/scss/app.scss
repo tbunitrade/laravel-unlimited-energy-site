@@ -5,17 +5,13 @@
 @import "general/_colors";
 @import "general/_breakpoints";
 //@import "general/_mixins";
-@import "general/elements";
+//@import "general/elements";
 
 /*style for components*/
 
-@import "components/_header";
-@import "components/_header-notification";
-@import "components/_mobile-menu";
-@import "components/_breadcrumb";
-@import "components/_hero";
-@import "components/_footer";
-@import "components/_pages-all";
+//@import "components/_header";
+//@import "components/_header-notification";
+
 
 /*style for pages*/
 @import "page/_home";
