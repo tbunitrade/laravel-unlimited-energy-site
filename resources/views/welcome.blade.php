@@ -6,6 +6,7 @@
     <title>Unlimited Energy - Обслуговування та ремонт генераторів</title>
     <meta name="description" content="Unlimited Energy - експерт по обслуговуванню та ремонту генераторів. Обслуговування промислових і побутових генераторів. Гарантія якості на всі види робіт.">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 </head>
 <body>
 <header>
