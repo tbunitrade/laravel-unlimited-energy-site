@@ -105,20 +105,19 @@
     }
 </style>
 
-<section class="services">
-    <h2>Unlimited Energy - ваш експерт по обслуговуванню та ремонту генераторів.</h2>
-    <ul>
-        <li><p class="text">Підключення, технічне обслуговування, ремонт дизельно-генераторних установок (ДГУ).</p></li>
-        <li><p class="text">Підключення, обслуговування та ремонт бензинових генераторів.</p></li>
-        <li><p class="text">Підключення джерел безперебійного живлення (ДБЖ), інверторів, акумуляторних батарей.</p></li>
-        <li><p class="text">Інші електротехнічні роботи.</p></li>
-    </ul>
-
-    <h2>Додаткові послуги</h2>
-    <ul>
-        <li><p class="text">Ремонт побутових генераторів.</p></li>
-    </ul>
+<section class="orderKyiv">
+    <h1>Ремонт та обслуговування генераторів у місті Київ та області.</h1>
+    <p class="seo-text">
+        Сервісне обслуговування, ремонт, діагностика бензинових та дизельних генераторів з виїздом додому
+        <br>
+        Індивідуальний підбір майстра для ремонту або обслуговування обладнання
+        <br>
+        Тільки перевірені професійні майстри з досвідом роботи
+        <br>
+        Чесна ціна та гарантія на ремонт бензинових і дизельних генераторів
+    </p>
 </section>
+
 
 <section>
     <img src="{{ asset('assets/img/generator2.webp') }}" alt="Генератор">
@@ -140,6 +139,24 @@
         <li><p class="text">3) Завершення робіт по ремонту генератора.<br> Підключення клієнта до гарантійного або сервісного обслуговування обладнання.</p></li>
     </ol>
 </section>
+
+
+<section class="services">
+
+    <h2>Unlimited Energy - ваш експерт по обслуговуванню та ремонту генераторів.</h2>
+    <ul>
+        <li><p class="text">Підключення, технічне обслуговування, ремонт дизельно-генераторних установок (ДГУ).</p></li>
+        <li><p class="text">Підключення, обслуговування та ремонт бензинових генераторів.</p></li>
+        <li><p class="text">Підключення джерел безперебійного живлення (ДБЖ), інверторів, акумуляторних батарей.</p></li>
+        <li><p class="text">Інші електротехнічні роботи.</p></li>
+    </ul>
+
+    <h2>Додаткові послуги</h2>
+    <ul>
+        <li><p class="text">Ремонт побутових генераторів.</p></li>
+    </ul>
+</section>
+
 
 <section class="mainService">
     <h2>Обслуговування генераторів</h2>
@@ -172,20 +189,20 @@
     <h5>Відгуки наших клієнтів</h5>
     <ul style="display: flex; flex-direction: row; gap: 20px; justify-content: center;">
         <li>
-            <img src="http://www.infrost.com.ua/img/thu/alco/alco_controls.jpg" alt="Логотип Alco Controls">
+            <img src="https://www.infrost.com.ua/img/thu/alco/alco_controls.jpg" alt="Логотип Alco Controls">
             <p>Замовляли технічний огляд нашого обладнання, і хлопці швидко виявили всі недоліки та оперативно провели ремонт. Уже другий місяць обладнання працює без перебоїв. Рекомендуємо Unlimited Energy!</p>
             <p><strong>Святослав В., топ-менеджер компанії Alco Controls</strong></p>
         </li>
         <li>
-            <img src="http://www.infrost.com.ua/img/thu/alco/alco_controls.jpg" alt="Логотип Alco Controls">
+            <img src="https://www.infrost.com.ua/img/thu/alco/alco_controls.jpg" alt="Логотип Alco Controls">
             <p>Компания Alco Controls понад 70 років на ринку холодильного обладнання та кондиціонування повітря.</p>
         </li>
         <li>
-            <img src="http://www.infrost.com.ua/img/thu/alfa_laval/alfalaval.jpg" alt="Логотип Alfa Laval">
+            <img src="https://www.infrost.com.ua/img/thu/alfa_laval/alfalaval.jpg" alt="Логотип Alfa Laval">
             <p>У складі Alfa Laval понад 110 маркетингових компаній і представництв у 95 країнах. Це одна з найбільших міжнародних промислових груп.</p>
         </li>
         <li>
-            <img src="http://www.infrost.com.ua/img/thu/bitzer/bitzer.jpg" alt="Логотип Bitzer">
+            <img src="https://www.infrost.com.ua/img/thu/bitzer/bitzer.jpg" alt="Логотип Bitzer">
             <p>Компания Bitzer (Німеччина) розпочала свою діяльність у 1934 році. Її головний акцент — використання сучасних технологій для вдосконалення обладнання для холодильної промисловості.</p>
         </li>
     </ul>
