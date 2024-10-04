@@ -1,0 +1,34 @@
+.columnGreySol1 {
+  .column_attr {
+    .align_center {
+      margin: auto!important;
+      margin-bottom: 20px!important;
+      border-radius:20px;
+      width:100%;
+      max-width:236px;
+    }
+
+    .learn-more {
+      text-decoration:none;
+      border-bottom:2px solid #585858;
+      font-size:14px;
+      line-height:16.8px;
+    }
+
+    .scale-with-grid {
+      position:relative;
+      top:30px;
+      border-radius:0px 0px 20px 20px;
+    }
+
+    h3 {
+      padding:29px 29px 0;
+      margin-bottom:0;
+      min-height:92px;
+    }
+
+    hr{
+      display:none;
+    }
+  }
+}

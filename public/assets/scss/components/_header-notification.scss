@@ -1,0 +1,55 @@
+//.header {
+//  .container {
+
+    .topHeader {
+      background: linear-gradient($gradient-start-green, $gradient-end-green);
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      display: none;
+
+      @media (min-width: $mediaTabletMin) {
+        padding: 0 24px;
+        height: 44px;
+      }
+
+      .notification {
+        text-align: center;
+
+        @media (min-width: $mediaTabletMin) {
+          text-align: unset;
+        }
+
+        @media (min-width: $mediaTabletMin) {
+        }
+
+        .text {
+          font-size: 14px;
+          line-height: unset;
+          color:white;
+          margin-bottom: 0;
+
+          @media (min-width: $mediaTabletMin) {
+            font-size: 14px;
+          }
+        }
+
+      }
+
+      .close_btn {
+        transition: 0.2s;
+        &:hover {
+          img {
+            transition: 0.2s;
+            transform: scale(1.2);
+          }
+        }
+
+      }
+
+      &.active {
+        display: flex;
+      }
+    }
+//  }
+//}

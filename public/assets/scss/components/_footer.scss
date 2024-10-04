@@ -1,0 +1,118 @@
+#Footer {
+  border-top:1px solid #e9e9e9;
+
+  .section_wrapper,
+  .container {
+    max-width: 1300px !important;
+  }
+
+  .social {
+    position: relative;
+
+    .icon-linkedin {
+      background-image:url('/wp-content/themes/betheme-child-theme/assets/img/in.svg');
+      background-repeat: no-repeat;
+      width: 21px;
+      height: 21px;
+      display: flex;
+
+      &:before{
+        display: none;
+      }
+    }
+    .icon-facebook {
+      background-image:url('/wp-content/themes/betheme-child-theme/assets/img/fb.svg');
+      background-repeat: no-repeat;
+      width: 21px;
+      height: 21px;
+      display: flex;
+
+      &:before{
+        display: none;
+      }
+    }
+
+    .caption {
+      font-size:12px;
+      text-transform: uppercase;
+      line-height: 14.4px;
+      color:#000000;
+      position: absolute;
+      left: -200%;
+      top: 20%;
+    }
+
+    .widget_block {
+      margin:0;
+    }
+
+    .widgets_wrapper{
+      padding-top:64px!important;
+      p {
+        font-size:14px;
+        line-height:21px;
+      }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color:black!important;
+    }
+
+    h5 {
+      text-transform:uppercase!important;
+      margin-bottom:0;
+
+      @media (min-width: $mediaDesktopMid){
+        font-size: 18px!important;
+        line-height: 21px!important;
+        font-weight: 700!important;
+      }
+    }
+
+    .widget_nav_menu {
+      ul {
+        padding: 0;
+        li {
+          list-style-type:none!important;
+          a {
+            padding: 3px 0 9px 3px;
+          }
+        }
+      }
+    }
+
+    a {
+      text-decoration:none!important;
+      font-size:14px!important;
+      line-height:16px!important;
+      color:black!important;
+
+      span {
+        padding-left: 4px;
+        svg {
+          height: 12px;
+          width: 11px;
+          position: relative;
+          top: 2px;
+        }
+      }
+    }
+  }
+
+  .menu {
+    background-color: white!important;
+    color:black!important;
+  }
+
+  @media (min-width: $mediaDesktopMid) {
+    .one-fourth:first-child {
+      width: 27%;
+    }
+  }
+
+
+}

@@ -1,0 +1,165 @@
+.hero-title {
+  font-size: 32px!important;
+  line-height: 38px!important;
+  color: white;
+  font-weight: 700;
+
+  @media (min-width: $mediaDesktopMid) {
+    font-size: 50px!important;
+    line-height: 50px!important;
+  }
+}
+
+.heroDefaultContainer {
+
+  .mcb-section-inner{
+    display:flex!important;
+    display:flex;
+    align-content:center;
+    flex-direction:row;
+
+    .wrap {
+      float:none!important;
+
+
+      &.heroInner {
+        .fancy_heading_line {
+          padding-top:3px;
+
+          .title {
+            margin-bottom:16px!important;
+            background:yellow;
+          }
+
+          .inside {
+            background:red;
+            padding:0px 80px;
+          }
+        }
+      }
+
+      &.heroFormContainer {
+
+        /*Form styling*/
+        .talk-expert {
+          background-color: #f7f7f7;
+          border-radius: 24px;
+          width: 100%;
+          max-width: 528px!important;
+          margin:auto;
+
+          .one,
+          .column {
+            margin: 0;
+            width: 100%;
+          }
+
+          .box-phone {
+            color:black;
+          }
+
+          p {
+            font-size:14px;
+            line-height:16.8px;
+            font-weight: 400;
+            color: black;
+            padding: 0 20px;
+          }
+
+          .te-title {
+            background-color: #29856f;
+            color:white;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 700;
+
+            text-align: center;
+            padding: 16px 20px;
+            margin-bottom: 0;
+            border-radius: 24px 24px 0 0;
+          }
+
+          a{
+            font-size: 14px;
+            line-height: 16.8px;
+            font-weight: 400;
+            color: black;
+
+            &:hover {
+              cursor:pointer;
+            }
+          }
+
+          form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            input {
+              width: 100%;
+              max-width:224px;
+              height: 40px;
+              padding: 10px 12px 12px 12px;
+              gap: 10px;
+              border-radius: 8px;
+              border: 1px solid #D5D5D5;
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+
+  @media (min-width: $mediaDesktopMid) {
+    .mcb-section-inner{
+      flex-direction: column;
+      flex-direction: column!important;
+
+      .wrap {
+
+        .fancy_heading_line {
+          background-image: none!important;
+        }
+
+        &.heroInner {
+
+          .fancy_heading_line {
+            padding-top:113px;
+            padding-top: 60px;
+
+            .title {
+              margin-bottom:32px!important;
+
+              font-size: 40px!important;
+              line-height: 48px!important;
+              color: black!important;
+            }
+
+            .inside {
+              color: #000000!important;
+              font-size: 18px!important;
+              line-height: 21.6px!important;
+            }
+          }
+        }
+
+        &.heroFormContainer {
+          /*Form styling*/
+          .talk-expert {
+
+            p {
+              padding: 0 32px;
+            }
+
+            .te-title {
+              font-size: 24px;
+              line-height: 28.8px;
+              padding: 16px 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

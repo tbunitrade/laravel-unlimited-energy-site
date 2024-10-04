@@ -1,0 +1,53 @@
+$roboto-font-path: "../fonts/lato";
+
+@font-face {
+  // This is parsed as a normal function call that takes a quoted string.
+  src: url("#{$roboto-font-path}/Lato-Thin.ttf") format("ttf");
+
+  font-family: "Lato";
+  font-weight: 100;
+}
+
+@font-face {
+  src: url($roboto-font-path + "/Lato-Light.ttf") format("ttf");
+
+  font-family: "Lato";
+  font-weight: 300;
+}
+
+@font-face {
+  src: url($roboto-font-path + "/Lato-Regular.ttf") format("ttf");
+
+  font-family: "Lato";
+  font-weight: 400;
+}
+
+@font-face {
+  src: url($roboto-font-path + "/Lato-SemiBold.ttf") format("ttf");
+
+  font-family: "Lato";
+  font-weight: 600;
+}
+
+@font-face {
+  src: url($roboto-font-path + "/Lato-Bold.ttf") format("ttf");
+
+  font-family: "Lato";
+  font-weight: 700;
+}
+
+@font-face {
+  src: url($roboto-font-path + "/Lato-ExtraBold.ttf") format("ttf");
+
+  font-family: "Lato";
+  font-weight: 800;
+}
+
+//@font-face {
+//  // This is parsed as a normal function call that takes an arithmetic
+//  // expression.
+//  src: url($roboto-font-path + "/Lato-Black.ttf") format("ttf");
+//
+//  font-family: "Lato";
+//  font-weight: 900;
+//}

@@ -1,0 +1,26 @@
+/*general settings*/
+//@import "general/_reset";
+@import "general/_general";
+@import "general/_fonts";
+@import "general/_colors";
+@import "general/_breakpoints";
+//@import "general/_mixins";
+@import "general/elements";
+
+/*style for components*/
+
+@import "components/_header";
+@import "components/_header-notification";
+@import "components/_mobile-menu";
+@import "components/_breadcrumb";
+@import "components/_hero";
+@import "components/_footer";
+@import "components/_pages-all";
+
+/*style for pages*/
+@import "page/_home";
+//@import "page/_home.scss";
+//@import "page/_home.scss";
+//@import "page/_home.scss";
+//@import "page/_home.scss";
+//@import "page/_home.scss";
