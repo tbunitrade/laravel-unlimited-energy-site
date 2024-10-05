@@ -5,11 +5,16 @@
 @import "general/_colors";
 @import "general/_breakpoints";
 //@import "general/_mixins";
-//@import "general/elements";
+@import "general/elements";
+
+@import "general/form";
 
 /*style for components*/
+@import "components/_header";
+@import "components/_sidebar";
+@import "components/_article";
+@import "components/_footer";
 
-//@import "components/_header";
 //@import "components/_header-notification";
 
 

@@ -1,0 +1,47 @@
+.article {
+    grid-area: article;
+    //background-color: #ffa08c;
+
+
+    &:before {
+        content: '';
+        display: block;
+        background-image:url("../img/generator.webp") ;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        top:0;
+    }
+
+    section {
+        margin: 30px 20px;
+        padding: 20px;
+
+        background: #f7f7f7;
+        border-radius: 30px;
+
+        .content  {
+                padding: 10px;
+        }
+    }
+
+
+    .clients {
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+
+    .gaurantee {
+        ul {
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+}

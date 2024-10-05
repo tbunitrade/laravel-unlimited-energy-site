@@ -1,88 +1,20 @@
 /*general settings*/
-p, h1, h2, h3, h4, h5, h6, span, label, em {
-  font-family: "Lato", sans-serif;
+#app {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas: "sidebar sidebar sidebar header header header" "sidebar sidebar sidebar article article article" "sidebar sidebar  sidebar footer footer footer ";
 }
 
-h1 {
-  font-size: 28px !important;
-  line-height: 33px !important;
-  font-weight: 700 !important;
-}
-
-h3, h5 {
-  font-size: 24px !important;
-  line-height: 28.8px !important;
-}
-
-.h3Big {
-  font-size: 40px !important;
-  line-height: 48px !important;
-  margin-bottom: 0;
-}
-
-.hideMe {
-  position: relative !important;
-  top: 27px !important;
-  margin-bottom: 20px;
-}
-
-a {
-  text-decoration: none;
-  font-family: "Lato", sans-serif;
-}
-a:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-ul, p {
-  margin: 0;
-  padding: 0;
-}
-
-ul li a, ol li a {
-  text-decoration: none;
-}
-
-li, p, a {
-  font-size: 16px;
-  line-height: 19.2px;
-}
-
-em {
-  font-style: normal;
-}
-
-body {
-  box-sizing: border-box;
+.logo img {
+  width: 222px;
 }
 
 .flex {
   display: flex;
 }
-
-.row {
+.flex .content {
   flex-direction: row;
-}
-
-.grid {
-  display: grid;
-}
-
-.btn {
-  display: block;
-}
-
-.section_wrapper,
-.container {
-  max-width: 1440px !important;
-}
-
-#Content,
-.home {
-  width: 100%;
-  max-width: 1440px;
-  margin: auto;
 }
 
 @font-face {
@@ -115,33 +47,114 @@ body {
   font-family: "Lato";
   font-weight: 800;
 }
+p, h1, h2, h3, h4, h5, h6, span, label, em {
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-size: 21px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.text {
+  margin: 0;
+}
+
+.form {
+  grid-area: form;
+}
+
 /*style for components*/
-/*style for pages*/
-.servicesHome .scale-with-grid {
-  top: 6px !important;
-  position: relative;
-  border-radius: 0px 0px 24px 24px;
-}
-
-.cust-home-services {
-  border-radius: 39px;
-  width: 100%;
-  max-width: 410px;
-}
-.cust-home-services h3 {
-  font-size: 24px;
-  line-height: 32px;
-  color: black;
-  margin: 32px 0 16px 0px;
-  min-height: 69px;
-  align-items: center;
+.header {
+  grid-area: header;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
-.cust-home-services hr {
-  display: none;
+.header .title {
+  font-size: 21px;
+}
+.header .title span {
+  display: block;
+  font-size: 16px;
+}
+.header .info {
+  padding: 5px;
 }
 
-.one-fourth.column, .four.columns {
-  padding-bottom: 25px;
+.sidebar {
+  grid-area: sidebar;
+  width: 300px;
+  background: white;
 }
+.sidebar .container {
+  position: fixed;
+}
+.sidebar .container ul {
+  padding: 0;
+  margin: 0;
+}
+.sidebar .container ul li {
+  list-style-type: none;
+}
+.sidebar .container ul li .link {
+  font-size: 16px;
+  text-decoration: none;
+}
+.sidebar .container ul li .link:hover {
+  text-decoration: underline;
+}
+
+.article {
+  grid-area: article;
+}
+.article:before {
+  content: "";
+  display: block;
+  background-image: url("../img/generator.webp");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.article section {
+  margin: 30px 20px;
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 30px;
+}
+.article section .content {
+  padding: 10px;
+}
+.article .clients ul {
+  padding: 0;
+  margin: 0;
+}
+.article .clients ul li {
+  list-style-type: none;
+}
+.article .gaurantee ul li {
+  list-style-type: none;
+}
+
+.footer {
+  grid-area: footer;
+  position: relative;
+}
+.footer .copyright {
+  text-align: center;
+}
+
+/*style for pages*/
