@@ -44,4 +44,53 @@
             }
         }
     }
+
+    .mainService {
+        ul {
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-areas:
+      ". . . one one one . . . . . ."
+      ". . . . . . two two two two  . ."
+      ". . . three three three three . . . . ."
+      ". . . . . . four four four four  . .";
+            gap: 20px; // Добавим промежутки между элементами
+            li {
+                list-style-type: none;
+                width: 100%;
+                max-width: 250px;
+
+                img {
+                    width: 100%;
+                }
+
+                &.one {
+                    grid-area: one;
+                }
+
+                &.two {
+                    grid-area: two;
+                }
+
+                &.three {
+                    grid-area: three;
+                }
+
+                &.four {
+                    grid-area: four;
+                }
+            }
+        }
+
+        // Медиазапрос для мобильных устройств
+        @media (max-width: 768px) {
+            ul {
+                display: block; // Меняем на блочное отображение
+                li {
+                    margin-bottom: 20px; // Добавляем отступы между элементами
+                }
+            }
+        }
+    }
 }

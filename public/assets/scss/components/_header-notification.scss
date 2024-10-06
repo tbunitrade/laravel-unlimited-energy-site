@@ -1,55 +1,31 @@
-//.header {
-//  .container {
+#page {
+    display: grid;
+    width: 100%;
+    height: 250px;
+    grid-template-areas:
+    "head head"
+    "nav  main"
+    ".  foot";
+    grid-template-rows: 50px 1fr 30px;
+    grid-template-columns: 150px 1fr;
+}
 
-    .topHeader {
-      background: linear-gradient($gradient-start-green, $gradient-end-green);
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px;
-      display: none;
+#page > header {
+    grid-area: head;
+    background-color: #8ca0ff;
+}
 
-      @media (min-width: $mediaTabletMin) {
-        padding: 0 24px;
-        height: 44px;
-      }
+#page > nav {
+    grid-area: nav;
+    background-color: #ffa08c;
+}
 
-      .notification {
-        text-align: center;
+#page > main {
+    grid-area: main;
+    background-color: #ffff64;
+}
 
-        @media (min-width: $mediaTabletMin) {
-          text-align: unset;
-        }
-
-        @media (min-width: $mediaTabletMin) {
-        }
-
-        .text {
-          font-size: 14px;
-          line-height: unset;
-          color:white;
-          margin-bottom: 0;
-
-          @media (min-width: $mediaTabletMin) {
-            font-size: 14px;
-          }
-        }
-
-      }
-
-      .close_btn {
-        transition: 0.2s;
-        &:hover {
-          img {
-            transition: 0.2s;
-            transform: scale(1.2);
-          }
-        }
-
-      }
-
-      &.active {
-        display: flex;
-      }
-    }
-//  }
-//}
+#page > footer {
+    grid-area: foot;
+    background-color: #8cffa0;
+}
