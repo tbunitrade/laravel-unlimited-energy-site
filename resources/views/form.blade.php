@@ -13,11 +13,10 @@
     <label for="topic">Тема:</label>
     <br>
     <select id="topic" name="topic" required>
-        <option value="0">вкажіть</option>
-        <option value="dgu">ТО і ремонт промислових ДГУ</option>
-        <option value="generators">ТО і ремонт побутових генераторів</option>
-        <option value="ups">Підключення ДГУ та ІБП</option>
-        <option value="consultation">Консультація</option>
+        <option value="dgu">ТО і ремонт дизельних генераторів (ДГУ)</option>
+        <option value="generators">ТО і ремонт бензинових генераторів</option>
+        <option value="ups">Підключення ДГУ та джерел безперебійного живлення</option>
+        <option value="consultation">Безкоштовна консультація</option>
         <option value="other">Інше</option>
     </select>
     <br><br>

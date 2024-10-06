@@ -6,66 +6,96 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Log;
+use GuzzleHttp\Client;
 
 class MainController extends Controller
 {
     //
     public function index()
     {
-        // template for landiong page
+        // template for landing page
         return view('welcome');
     }
 
-    public function send(Request  $request)
+    public function send(Request $request)
     {
-        //logic for form request
+        // Валидация данных формы
         $validated = $request->validate([
-           'name' => 'required|string|max:255',
-           'phone' => 'required|string|max:15',
-           'topic' => 'required|string',
+            'name' => 'required|string|max:255',
+            'phone' => 'required|string|max:15',
+            'topic' => 'required|string',
         ]);
 
+        // Сохранение данных в базу
         Contact::create($validated);
 
-        //logic for email sender
+        // Формируем сообщение для отправки в Telegram
+        $message = "Нове від {$validated['name']}\nТема: {$validated['topic']}\nТелефон: {$validated['phone']}";
 
-//        try {
-//            Mail::raw('Нове повідомлення зі сайту' . $validated['name'], function ($message)  {
-//                $message->to(['tbunitrade@gmail.com', 'ilyavesely@gmail.com',''])
-//                    -> subject('Нове повідомлення з сайту');
-//            });
-//
-//
-//            Log::info('Почта отправлена успешно');
-//
-//            return redirect()->route('home')->with('success','Дякую за звернення');
-//
-//        } catch (\Exception $e) {
-//            // Если произошла ошибка, записываем её в лог
-//            Log::error('Ошибка при отправке письма: ' . $e->getMessage());
-//
-//            // Возвращаем сообщение о неудаче
-//            return redirect()->route('home')->with('error', 'Не вдалося відправити лист. Спробуйте пізніше.');
-//        }
+        // Отправляем сообщение в Telegram
+        $this->sendTelegramMessage($message);
 
         try {
             // Убираем пустые строки и передаём только корректные email-адреса
-            $recipients = array_filter(['tbunitrade@gmail.com', 'ilyavesely@gmail.com']);
+            //$recipients = array_filter(['tbunitrade@gmail.com', 'ilyavesely@gmail.com']);
 
-            Mail::raw('Нове повідомлення зі сайту від ' . $validated['name'], function ($message) use ($recipients) {
+            $recipients = explode(',', env('MAIL_RECIPIENTS'));
+
+            // Отправка письма
+            Mail::raw('Нове зі сайту від ' . $validated['name'], function ($message) use ($recipients) {
                 $message->to($recipients)
-                    ->subject('Нове повідомлення з сайту');
+                    ->subject('Нове з сайту');
             });
 
-            Log::info('Почта отправлена успешно');
+            Log::info('Почта надіслана успешно!');
 
+            // Перенаправляем пользователя с сообщением об успешной отправке
             return redirect()->route('home')->with('success', 'Дякую за звернення');
         } catch (\Exception $e) {
-            // Логирование ошибки
+            // Логирование ошибки отправки письма
             Log::error('Ошибка при отправке письма: ' . $e->getMessage());
 
-            // Возвращаем сообщение об ошибке
+            // Перенаправляем пользователя с сообщением об ошибке
             return redirect()->route('home')->with('error', 'Не вдалося відправити лист. Спробуйте пізніше.');
+        }
+    }
+
+    // Метод для отправки сообщения в Telegram
+    public function sendTelegramMessage($message)
+    {
+//        $token = '7575529742:AAHP8BwPuiA-NzgqhhCOF7CxNQLL_FADs2o'; // Твой токен от BotFather
+//        $chatId = '-1002165481411'; // Числовой chat_id твоего приватного канала
+
+        $token = config('services.telegram.bot_token');
+        $chatId = config('services.telegram.chat_id');
+
+        if (empty($token) || empty($chatId)) {
+            Log::error('Отсутствует токен или chat_id для Telegram.');
+            return;
+        }
+
+
+        $url = "https://api.telegram.org/bot{$token}/sendMessage";
+
+        $params = [
+            'chat_id' => $chatId,
+            'text' => $message,
+        ];
+
+        try {
+            // Создаем новый клиент Guzzle
+            $client = new Client();
+            $response = $client->post($url, ['form_params' => $params]);
+
+            if ($response->getStatusCode() == 200) {
+                Log::info('Сообщение успешно отправлено в Telegram');
+            } else {
+                Log::error('Ошибка при отправке сообщения в Telegram: Статус ответа ' . $response->getStatusCode());
+            }
+
+        } catch (\Exception $e) {
+            // Логирование ошибки отправки в Telegram
+            Log::error('Ошибка при отправке в Telegram: ' . $e->getMessage());
         }
     }
 }

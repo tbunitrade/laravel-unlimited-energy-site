@@ -14,7 +14,11 @@
     }
 
     section {
-        margin: 30px 20px;
+
+        max-width: 1440px;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 20px;
         padding: 20px;
 
         background: #f7f7f7;
@@ -51,15 +55,15 @@
             margin: 0;
             display: grid;
             grid-template-areas:
-      ". . . one one one . . . . . ."
-      ". . . . . . two two two two  . ."
-      ". . . three three three three . . . . ."
-      ". . . . . . four four four four  . .";
+      "one one . . . ."
+      ".  two two . . ."
+      ". . . three three ."
+      ". . .  . four four ";
             gap: 20px; // Добавим промежутки между элементами
             li {
                 list-style-type: none;
                 width: 100%;
-                max-width: 250px;
+                max-width: 350px;
 
                 img {
                     width: 100%;

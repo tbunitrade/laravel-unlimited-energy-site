@@ -3,10 +3,17 @@
 
 
     grid-area: header;
-    //width: 100vw;
+    ////width: 100vw;
+    //display: flex;
+    //flex-direction: row;
+    //justify-content: space-around;
+
+
+    grid-area: header;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .title {
         font-size: 21px;
