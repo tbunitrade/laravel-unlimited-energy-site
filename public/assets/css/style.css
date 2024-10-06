@@ -205,9 +205,10 @@ h5 {
   padding: 0;
   margin: 0;
   display: grid;
+  grid-template-areas: "one " "two" "three" "four";
   gap: 20px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1440px) {
   .article .mainService ul {
     grid-template-areas: "one one . . . ." ".  two two . . ." ". . . three three ." ". . .  . four four ";
   }
