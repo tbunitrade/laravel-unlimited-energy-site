@@ -54,11 +54,13 @@
             padding: 0;
             margin: 0;
             display: grid;
-            grid-template-areas:
+            @media (max-width: 768px) {
+                grid-template-areas:
       "one one . . . ."
       ".  two two . . ."
       ". . . three three ."
       ". . .  . four four ";
+            }
             gap: 20px; // Добавим промежутки между элементами
             li {
                 list-style-type: none;
