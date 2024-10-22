@@ -94,6 +94,9 @@ body {
 .form {
   grid-area: form;
   padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
 }
 .form label {
   font-size: 15px;

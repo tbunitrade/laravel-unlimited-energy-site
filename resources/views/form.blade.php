@@ -1,4 +1,4 @@
-<form class="form" action="{{ route('send') }}" method="POST" style="width: 400px; margin: auto;">
+<form class="form" action="{{ route('send') }}" method="POST">
     @csrf
     <label for="name">Ім’я:</label>
     <br>
