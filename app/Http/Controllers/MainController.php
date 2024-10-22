@@ -63,9 +63,6 @@ class MainController extends Controller
     // Метод для отправки сообщения в Telegram
     public function sendTelegramMessage($message)
     {
-//        $token = '7575529742:AAHP8BwPuiA-NzgqhhCOF7CxNQLL_FADs2o'; // Твой токен от BotFather
-//        $chatId = '-1002165481411'; // Числовой chat_id твоего приватного канала
-
         $token = config('services.telegram.bot_token');
         $chatId = config('services.telegram.chat_id');
 
