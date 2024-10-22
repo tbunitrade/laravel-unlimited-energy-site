@@ -54,12 +54,12 @@
             padding: 0;
             margin: 0;
             display: grid;
-            grid-template-areas:
-      "one "
-      "two"
-      "three"
-      "four";
-            @media (max-width: $mediaDesktopMid) {
+            //grid-template-areas:
+            //        "one "
+            //        "two"
+            //        "three"
+            //        "four";
+            @media (min-width: $mediaDesktopMid) {
                 grid-template-areas:
       "one one . . . ."
       ".  two two . . ."
@@ -95,7 +95,7 @@
         }
 
         // Медиазапрос для мобильных устройств
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
             ul {
                 display: block; // Меняем на блочное отображение
                 li {

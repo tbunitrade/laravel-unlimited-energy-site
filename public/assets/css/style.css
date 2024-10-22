@@ -1,22 +1,4 @@
 /*general settings*/
-#app {
-  display: grid;
-  width: 100vw;
-  height: 100vh;
-  grid-template-areas: "header header header" "article article article" "footer footer footer";
-}
-
-.logo img {
-  width: 222px;
-}
-
-.flex {
-  display: flex;
-}
-.flex .content {
-  flex-direction: row;
-}
-
 @font-face {
   src: url("../fonts/lato/Lato-Thin.ttf") format("ttf");
   font-family: "Lato";
@@ -79,6 +61,29 @@ h5 {
 
 .text-center {
   text-align: center;
+}
+
+#app {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas: "header" "article" "footer";
+}
+@media (min-width: 1440px) {
+  #app {
+    grid-template-areas: "header header header" "article article article" "footer footer footer";
+  }
+}
+
+.logo img {
+  width: 222px;
+}
+
+.flex {
+  display: flex;
+}
+.flex .content {
+  flex-direction: row;
 }
 
 .form {
@@ -205,10 +210,9 @@ h5 {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-areas: "one " "two" "three" "four";
   gap: 20px;
 }
-@media (max-width: 1440px) {
+@media (min-width: 1440px) {
   .article .mainService ul {
     grid-template-areas: "one one . . . ." ".  two two . . ." ". . . three three ." ". . .  . four four ";
   }
@@ -233,7 +237,7 @@ h5 {
 .article .mainService ul li.four {
   grid-area: four;
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .article .mainService ul {
     display: block;
   }

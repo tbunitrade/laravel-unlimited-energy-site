@@ -2,10 +2,19 @@
     display: grid;
     width: 100vw;
     height: 100vh;
+
     grid-template-areas:
+    "header"
+    "article"
+    "footer";
+
+
+    @media (min-width: $mediaDesktopMid) {
+        grid-template-areas:
         "header header header"
         "article article article"
         "footer footer footer";
+    }
     //grid-template-rows: 50px 1fr 30px;
     //grid-template-columns: 150px 1fr;
 
