@@ -212,20 +212,20 @@
                 <h5>Відгуки наших клієнтів</h5>
                 <ul style="display: flex; flex-direction: row; gap: 20px; justify-content: center;">
                     <li>
-                        <img src="https://www.infrost.com.ua/img/thu/alco/alco_controls.jpg" alt="Логотип Alco Controls">
+                        <img src="{{asset('assets/img/alco_controls.jpg')}}" alt="Логотип Alco Controls">
                         <p>Замовляли технічний огляд нашого обладнання, і хлопці швидко виявили всі недоліки та оперативно провели ремонт. Уже другий місяць обладнання працює без перебоїв. Рекомендуємо Unlimited Energy!</p>
                         <p><strong>Святослав В., топ-менеджер компанії Alco Controls</strong></p>
                     </li>
                     <li>
-                        <img src="https://www.infrost.com.ua/img/thu/alco/alco_controls.jpg" alt="Логотип Alco Controls">
+                        <img src="{{asset('assets/img/alco_controls.jpg')}}" alt="Логотип Alco Controls">
                         <p>Компания Alco Controls понад 70 років на ринку холодильного обладнання та кондиціонування повітря.</p>
                     </li>
                     <li>
-                        <img src="https://www.infrost.com.ua/img/thu/alfa_laval/alfalaval.jpg" alt="Логотип Alfa Laval">
+                        <img src="{{asset('assets/img/alco_controls.jpg')}}" alt="Логотип Alfa Laval">
                         <p>У складі Alfa Laval понад 110 маркетингових компаній і представництв у 95 країнах. Це одна з найбільших міжнародних промислових груп.</p>
                     </li>
                     <li>
-                        <img src="https://www.infrost.com.ua/img/thu/bitzer/bitzer.jpg" alt="Логотип Bitzer">
+                        <img src="{{asset('assets/img/alco_controls.jpg')}}" alt="Логотип Bitzer">
                         <p>Компания Bitzer (Німеччина) розпочала свою діяльність у 1934 році. Її головний акцент — використання сучасних технологій для вдосконалення обладнання для холодильної промисловості.</p>
                     </li>
                 </ul>
