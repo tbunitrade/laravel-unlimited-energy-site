@@ -15,7 +15,8 @@
     <select id="topic" name="topic" required>
         <option value="dgu">ТО і ремонт дизельних генераторів (ДГУ)</option>
         <option value="generators">ТО і ремонт бензинових генераторів</option>
-        <option value="ups">Підключення ДГУ та джерел безперебійного живлення</option>
+        <option value="ups">Підключення джерел безперебійного живлення</option>
+        <option value="dgu">Підключення ДГУ</option>
         <option value="consultation">Безкоштовна консультація</option>
         <option value="other">Інше</option>
     </select>
