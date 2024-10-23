@@ -13,7 +13,14 @@
     align-items: center;
 
     .title {
-        font-size: 21px;
+       font-size: 16px;
+        line-height: 22px;
+
+        @media (min-width: $mediaDesktopMid) {
+            font-size: 21px;
+
+            line-height: 26px;
+        }
 
         span {
             display: block;

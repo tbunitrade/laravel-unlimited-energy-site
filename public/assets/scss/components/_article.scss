@@ -34,6 +34,14 @@
         ul {
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: center;
+
+            @media (min-width: $mediaDesktopMid) {
+                flex-direction: row;
+            }
 
             li {
                 list-style-type: none;
@@ -71,11 +79,11 @@
             padding: 0;
             margin: 0;
             display: grid;
-            //grid-template-areas:
-            //        "one "
-            //        "two"
-            //        "three"
-            //        "four";
+            grid-template-areas:
+                    "one"
+                    "two"
+                    "three"
+                    "four";
             @media (min-width: $mediaDesktopMid) {
                 grid-template-areas:
                   "one one . . . ."

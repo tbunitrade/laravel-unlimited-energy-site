@@ -16,6 +16,7 @@
 
     select,
     input {
+        box-sizing: border-box;
         height: 40px;
         width: 100%;
         max-width: 379px;
@@ -36,7 +37,6 @@
 
     select {
         width: 100%;
-        max-width: 440px;
         padding: 0;
         margin: 0;
         display: block;
@@ -44,6 +44,7 @@
 
     button {
         width: 100%;
+        max-width: 379px;
         line-height: 40px;
         font-style: normal;
         font-weight: bold;
