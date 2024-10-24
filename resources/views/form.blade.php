@@ -1,4 +1,6 @@
 <form class="form" action="{{ route('send') }}" method="POST">
+    <fieldset>
+    <legend>Замовити дзвінок</legend>
     @csrf
     <label for="name">Ім’я:</label>
     <br>
@@ -20,7 +22,36 @@
         <option value="consultation">Безкоштовна консультація</option>
         <option value="other">Інше</option>
     </select>
+
+    </fieldset>
+    <br><br>
+    <!-- Текст перед кнопкой -->
+
+    <!-- Простая CAPTCHA -->
+    <label for="captcha">Введіть суму 3 + 7</label>
+    <br>
+    <input type="text" id="captcha" name="captcha" required>
+    <br><br>
+    <br>
+    <small>
+        Натискаючи кнопку “Відправити повідомлення” я погоджуюся із наданням своїх персональних даних,
+        які я залишаю на сайті, та використанням цих даних власником сайту у цілях контакту зі мною,
+        а також подальших маркетингових заходів власника сайту та його партнерів.
+    </small>
     <br><br>
 
     <button type="submit">Відправити повідомлення</button>
+
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
+    @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
+
 </form>

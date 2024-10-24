@@ -19,11 +19,12 @@ class MainController extends Controller
 
     public function send(Request $request)
     {
-        // Валидация данных формы
+        // Валидация данных формы, включая CAPTCHA
         $validated = $request->validate([
             'name' => 'required|string|max:255',
             'phone' => 'required|string|max:15',
             'topic' => 'required|string',
+            'captcha' => 'required|in:10', // CAPTCHA: 3 + 7 = 10
         ]);
 
         // Сохранение данных в базу
@@ -36,9 +37,6 @@ class MainController extends Controller
         $this->sendTelegramMessage($message);
 
         try {
-            // Убираем пустые строки и передаём только корректные email-адреса
-            //$recipients = array_filter(['tbunitrade@gmail.com', 'ilyavesely@gmail.com']);
-
             $recipients = explode(',', env('MAIL_RECIPIENTS'));
 
             // Отправка письма
@@ -50,15 +48,15 @@ class MainController extends Controller
             Log::info('Почта надіслана успешно!');
 
             // Перенаправляем пользователя с сообщением об успешной отправке
-            return redirect()->route('home')->with('success', 'Дякую за звернення');
+            return redirect()->route('home')->with('success', 'Дякуємо за звернення! Ми зв’яжемось із Вами найближчим часом.');
         } catch (\Exception $e) {
-            // Логирование ошибки отправки письма
             Log::error('Ошибка при отправке письма: ' . $e->getMessage());
 
             // Перенаправляем пользователя с сообщением об ошибке
             return redirect()->route('home')->with('error', 'Не вдалося відправити лист. Спробуйте пізніше.');
         }
     }
+
 
     // Метод для отправки сообщения в Telegram
     public function sendTelegramMessage($message)
