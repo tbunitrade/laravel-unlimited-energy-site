@@ -144,6 +144,15 @@ body {
   cursor: pointer;
   border-radius: 24px;
 }
+.form .alert {
+  text-align: center;
+}
+.form .alert-success {
+  color: green;
+}
+.form .alert-danger {
+  color: red;
+}
 
 /*style for components*/
 .header {

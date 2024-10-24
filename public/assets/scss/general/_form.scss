@@ -71,4 +71,15 @@
             border-radius: 24px;
         }
     }
+
+    .alert {
+        text-align: center;
+    }
+    .alert-success {
+        color: green;
+    }
+
+    .alert-danger {
+        color: red;
+    }
 }
