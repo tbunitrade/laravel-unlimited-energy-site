@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link rel="icon" type="image/x-icon" href="{{asset('assets/img/favicon.png')}}">
 
-    <!-- Open Graph Generated: a.pr-cy.ru -->
+    <!-- Open Graph -->
     <meta property="og:type" content="business.business">
     <meta property="og:title" content="Unlimited Energy - Обслуговування та ремонт генераторів">
     <meta property="og:description" content="Unlimited Energy - експерт по обслуговуванню та ремонту генераторів. Обслуговування промислових і побутових генераторів. Гарантія якості на всі види робіт.">
@@ -16,7 +16,7 @@
     <meta property="og:image" content="https://ue24.com.ua/assets/img/service2.webp">
     <meta property="og:site_name" content="Unlimited Energy">
     <meta property="og:locale" content="ua_UA">
-    <!-- Twitter -->
+
     <meta property="twitter:card" content="summary_large_image">
 
 </head>
