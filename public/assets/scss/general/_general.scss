@@ -23,24 +23,20 @@ body {
     }
     //grid-template-rows: 50px 1fr 30px;
     //grid-template-columns: 150px 1fr;
-
-
 }
-
 
 .logo {
 
     img {
         width: 222px;
     }
-
 }
+
 .flex {
     display: flex;
     .content {
         flex-direction: row;
     }
-
 }
 
 

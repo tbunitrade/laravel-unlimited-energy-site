@@ -22,7 +22,6 @@
 </head>
 <body>
     <div id="app">
-
         <header class="header ">
             <a class="logo" href="/">
                 <img src="{{asset('assets/img/logo-mini.png')}}" alt="logo">
@@ -35,7 +34,6 @@
             <div class="info">
                 <a class="callMe" href="tel:+380992213341" title="замовити електротехнічні послуги ">+38(099)221-3341</a>
             </div>
-
 
 {{--            <option value="dgu">ТО і ремонт дизельних генераторів (ДГУ)</option>--}}
 {{--            <option value="generators">ТО і ремонт бензинових генераторів</option>--}}
@@ -339,8 +337,6 @@
                 </ul>
             </section>
         </article>
-
-
         <footer class="footer">
             <p class="copyright">&copy; 2024 Unlimited Energy. Ваша безкінечна енергія 24/7</p>
         </footer>
